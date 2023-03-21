@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+
+  </head>
+  <body>
+
+    <main>
+      <h1>Płótno</h1>
+      <canvas id="canvas" width="500" height="500" style="border:1px solid #000000;">
+      Wygląda na to, że twoja przeglądarka nie obsługuje elementu "canvas" 
+      </canvas>
+
+      <script>
+        var canvas = document.getElementById('canvas');
+        ctx = canvas.getContext('2d');        
+
+        ctx.fillStyle = 'rgb(221, 92, 92)';
+        ctx.lineWidth = 4;
+        ctx.strokeStyle='brown';
+        ctx.moveTo(90,100);
+        ctx.lineTo(410, 100);
+        ctx.lineTo(330, 420);
+        ctx.lineTo(170, 420);
+        ctx.lineTo(90, 100);
+        ctx.fill();
+        ctx.stroke();
+
+        var ctx2 = canvas.getContext("2d");
+        ctx2.strokeStyle = 'rgb(255, 134, 154)';
+        ctx2.fillStyle = "pink";
+        ctx2.beginPath();
+        ctx2.arc(250, 360, 40, 0, 2 * Math.PI);
+        ctx2.fill();
+        ctx2.stroke();
+
+
+
+        var ctx3 = canvas.getContext("2d");
+        ctx3.fillStyle = "rgb(255, 0, 170)";
+        ctx3.lineWidth = 2;
+        ctx3.strokeStyle = 'rgb(255, 0, 170)';
+        ctx3.beginPath();
+        ctx3.ellipse(230, 360, 5, 12, Math.PI / 1, 0, 2 * Math.PI);
+        ctx3.fill();
+        ctx3.stroke();
+
+        var ctx4 = canvas.getContext("2d");
+        ctx4.beginPath();
+        ctx4.ellipse(270, 360, 5, 12, Math.PI / 1, 0, 2 * Math.PI);
+        ctx4.fill();
+        ctx4.stroke();
+
+        var ctx5 = canvas.getContext("2d");
+        ctx3.lineWidth = 4;
+        ctx5.strokeStyle = 'black';
+        ctx5.fillStyle = "white";
+        ctx5.beginPath();
+        ctx5.arc(190, 180, 25, 0, 2 * Math.PI);
+        ctx5.fill();
+        ctx5.stroke();
+
+        var ctx6 = canvas.getContext("2d");
+        ctx6.beginPath();
+        ctx6.arc(310, 180, 25, 0, 2 * Math.PI);
+        ctx6.fill();
+        ctx6.stroke();
+
+        var ctx6 = canvas.getContext("2d");
+        ctx6.fillStyle = "black";
+        ctx6.beginPath();
+        ctx6.arc(320, 180, 8, 0, 2 * Math.PI);
+        ctx6.fill();
+        ctx6.stroke();
+
+        var ctx7 = canvas.getContext("2d");
+        ctx7.fillStyle = "black";
+        ctx7.beginPath();
+        ctx7.arc(180, 180, 8, 0, 2 * Math.PI);
+        ctx7.fill();
+        ctx7.stroke();
+
+        var ctx8 = canvas.getContext("2d");
+        ctx8.strokeStyle = "gray";
+        ctx8.fillStyle = "rgb(206, 206, 206)";
+        ctx8.beginPath();
+        ctx8.moveTo(90,98);
+        ctx8.lineTo(100, 50);
+        ctx8.lineTo(110, 98);
+        ctx8.lineTo(90,98);
+        ctx8.fill();
+        ctx8.stroke();
+
+        var ctx9 = canvas.getContext("2d");
+        ctx9.strokeStyle = "gray";
+        ctx9.fillStyle = "rgb(206, 206, 206)";
+        ctx9.beginPath();
+        ctx9.moveTo(410,98);
+        ctx9.lineTo(400, 50);
+        ctx9.lineTo(390, 98);
+        ctx9.lineTo(410,98);
+        ctx9.fill();
+        ctx9.stroke();
+        
+
+    </script>
+
+    </main>
+
+  </body>
+  </html>
