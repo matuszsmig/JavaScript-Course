@@ -1,0 +1,17 @@
+{
+    "dostepnePokoje": [
+      {
+        "id": 1,
+        "rodzaj": "Pokój jednoosobowy",
+        "udogodnienia": ["Łazienka", "TV"],
+        "ilosć": [2, 2]
+      },
+      {
+        "id": 2,
+        "rodzaj": "Pokój dwuosobowy",
+        "udogodnienia": ["Łazienka", "TV"],
+        "ilosć": [1, 3]
+      }
+    ],
+    "rezerwacje": []
+  }

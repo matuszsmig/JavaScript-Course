@@ -1,5 +1,8 @@
+const http = require('http');
+const url = require('url');
+
 let fromButton = document.getElementById("submitBtn");
-fromButton.addEventListener("click", getData);
+
 
 let itr = 0;
 
@@ -184,7 +187,81 @@ let resButton = document.getElementById("reservation");
 
 let flag = false;
 
-resButton.addEventListener("click", buildForm);
+resButton.addEventListener("click", buildForm2);
+
+function buildForm2(){
+    if (!flag) {
+        flag = true;
+        myForm.style.display = "block";
+    } else {
+        flag = false;
+        myForm.style.display = "none";
+    }
+
+}
+
+let imieNazwisko;
+let rodzaj;
+let udogodnienia;
+let dataRozpoczecia;
+let dataZakonczenia;
+
+let submitBtn = document.getElementById('submitBtn');
+
+submitBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    imieNazwisko = document.getElementById('name').value;
+    rodzaj = document.getElementById('num_room').value;
+    udogodnienia = document.getElementById('room_type').value;
+    dataRozpoczecia = document.getElementById('start').value;
+    dataZakonczenia = document.getElementById('end').value;
+
+    myForm.reset();
+});
+
+// Tworzenie serwera HTTP
+//const server = http.createServer((req, res) => {
+//    // Pobranie ścieżki URL żądania
+//    const requestUrl = url.parse(req.url, true);
+//  
+//    if (requestUrl.pathname === '/zapisz-dane' && req.method === 'GET') {
+//      // Pobranie danych z parametrów URL
+//      const imieNazwisko = requestUrl.query.imieNazwisko;
+//      const rodzaj = requestUrl.query.rodzaj;
+//      const udogodnienia = requestUrl.query.udogodnienia;
+//      const dataRozpoczecia = requestUrl.query.dataRozpoczecia;
+//      const dataZakonczenia = requestUrl.query.dataZakonczenia;
+//  
+//      const fs = require('fs');
+//      const newData = {
+//        imieNazwisko,
+//        rodzaj,
+//        udogodnienia,
+//        dataRozpoczecia,
+//        dataZakonczenia,
+//      };
+//      const jsonData = JSON.stringify(newData);
+//  
+//      fs.writeFile('zerwacje.json', jsonData, (err) => {
+//        if (err) {
+//          console.error('Wystąpił błąd podczas zapisywania danych:', err);
+//          res.statusCode = 500;
+//          res.end('Błąd podczas zapisywania danych');
+//        } else {
+//          console.log('Dane zostały zapisane:', jsonData);
+//          res.statusCode = 200;
+//          res.end('Dane zostały zapisane');
+//        }
+//      });
+//    } else {
+//      res.statusCode = 404;
+//      res.end('Nie znaleziono');
+//    }
+//  });
+//  const port = 3000;
+//  server.listen(port, () => {
+//    console.log(`Serwer nasłuchuje na porcie ${port}`);
+//  });
 
 function buildForm(){
     if (!flag){

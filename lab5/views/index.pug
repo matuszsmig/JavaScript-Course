@@ -1,0 +1,22 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Second Express application
+  body
+    main
+      h1 Second Express application
+      table
+        thead
+          tr
+            th First Name
+            th Last Name
+            th Faculty
+        tbody
+          each student in students
+            tr
+              td= student.name
+              td= student.surname
+              td= student.faculty
+    img(src='/img/image.jpg')
